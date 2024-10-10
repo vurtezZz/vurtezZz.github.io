@@ -1,0 +1,253 @@
+/* Import fontes - Lobster e Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Variáveis */
+:root {
+    /* Fontes */
+    --fonte-principal: "Poppins", sans-serif;
+    --fonte-secundaria: "Lobster", sans-serif;
+    /* Paleta de Cores */
+    --cor-principal: #747dff;
+    --cor-destaque: #ffad32;
+    --cor-principal-alpha:#747dff3c;
+    --cor-gradiente-01:#ffe7c2;
+    --cor-gradiente-02: #bdacff;
+    --cor-01:#f9f9f9;
+    --cor-2:#b8c0c7;
+    --cor-3:#767f86;
+    --cor-4:#3c4852;
+    --cor-5:#00000043;
+    /* Box shadow */
+    --sombra: 0 0.3rem 0.4rem 0.1rem var(--cor-5);
+}
+/* Limpa as configurações dos navegadores*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+}
+
+body { 
+    color: var(--cor-4);
+}
+
+/*Barra de navegação fixa e menu */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--cor-principal);
+    padding: 0.6rem 3rem;
+    color: var(--cor-01);
+    letter-spacing: 0.1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+}
+/* Banner e Calendário */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 96vh;
+}
+
+header div {
+    width: 100%;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-01);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.5rem;
+    height: 100%;
+
+    /*            eixo X     eixo Y     desfoque           cor */
+    text-shadow:  0.2rem       0        0.2rem          var(--cor-4);
+}
+
+
+.booking {
+    background-color: var(--cor-principal-alpha);
+    padding: 0.8rem 3rem;
+}
+
+.booking form {
+    background-color: var(--cor-01);
+    color: var(--cor-3);
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: end;
+    border-radius: 0.2rem;
+}
+
+form label {
+    display: block;
+}
+
+form input {
+    font-size: 1rem;
+    width: 88%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: solid 0.1rem var(--cor-2)
+}
+
+button {
+    background-color: var(--cor-destaque);
+    color: var(--cor-01);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.6rem 1.6rem;
+    border: none;
+    transition: 0.3s;
+    border-radius: 0.5rem;
+}
+
+button:hover {
+    background-color: var(--cor-principal);
+    cursor: pointer;
+}
+
+section {
+    margin: 2.5rem auto;
+    padding: 6rem 3rem;
+    min-height: 100vh;
+}
+
+/* Passeios */
+
+.passeios {
+    display:flex;
+}
+
+.passeios h1 {
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-principal)
+}
+
+.passeios hr {
+    margin: 1rem 0;
+    border: solid var(--cor-destaque);
+    border-radius: 1rem;
+    width: 15rem;
+}
+
+.passeios p {
+    margin: 1rem 0;
+}
+
+.info-passeio {
+
+    text-align: justify;
+    padding-right: 3rem;
+    flex: 1;
+}
+
+.fotos-passeios { 
+
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.fotos {
+    width: calc(50% -1rem);
+    border: solid 0.6rem var(--cor-01);
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+}
+
+.fotos img {
+    width: 100%;
+    display: flex;
+}
+
+/* Destinos */
+
+.destinos {
+
+    background: linear-gradient(50deg, var(--cor-gradiente-01), var(--cor-gradiente-02));
+
+}
+
+.destinos h1 {
+
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-principal);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.grupo-destinos {
+
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+}
+
+.card-destino {
+
+    background-color: var(--cor-01);
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-destino img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.card-destino > div {
+    padding: 1rem;
+}
+
+.card-destino > span {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card-destino > p {
+    margin: 1rem;
+    text-align: justify;
+    color: var(--cor-3);
+}
+
+.valor {
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+    margin: 1rem auto;
+}
+
+
+
+
